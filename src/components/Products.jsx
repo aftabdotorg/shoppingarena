@@ -61,9 +61,7 @@ const Products = ({ data, search, setFilteredValue }) => {
         <Filter>
           <FilterText>Filter Products :</FilterText>
           <Select onChange={handleFilterChange}>
-            <Option defaultValue selected>
-              Categories
-            </Option>
+            <Option defaultValue>Categories</Option>
             <Option value="all">All</Option>
             <Option value="jewelery">Jewelery</Option>
             <Option value="electronics">Electronics</Option>
@@ -82,6 +80,7 @@ const Products = ({ data, search, setFilteredValue }) => {
             ) {
               return value;
             }
+            return false; // return false if none condition matches
           })
           .map((item) => (
             <SingleProduct item={item} key={item.id} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import { Badge } from '@material-ui/core';
 
 import { tablet, mobile } from '../responsive.js';
 
@@ -36,8 +35,9 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-  border: 1px solid lightgray;
+  border: 1px solid purple;
   display: flex;
+  border-radius: 5px;
   align-items: center;
   margin-left: 25px;
   padding: 5px;
@@ -45,6 +45,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  text-align: center;
   outline: none;
   font-weight: bold;
   letter-spacing: 2px;
@@ -56,6 +57,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  font-weight: bold;
 `;
 
 const Center = styled.div`
@@ -72,6 +74,7 @@ const Logo = styled.h1`
 
 const Right = styled.div`
   flex: 1;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -108,9 +111,7 @@ const Navbar = ({ setSearch }) => {
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge color="secondary">
-              <ShoppingCartOutlined />
-            </Badge>
+            <ShoppingCartOutlined />
           </MenuItem>
         </Right>
       </Wrappper>

@@ -10,10 +10,15 @@ import {
 } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
+import { tablet, mobile } from '../responsive.js';
 
 const Container = styled.div`
   display: flex;
   padding: 2rem;
+
+  ${tablet({ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)' })}
+  ${mobile({ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)' })}
+
 `;
 
 const Left = styled.div`
@@ -23,6 +28,7 @@ const Left = styled.div`
   padding: 20px;
   margin: auto;
   justify-content: space-between;
+
 `;
 
 const Logo = styled.h1``;

@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { tablet, mobile } from '../responsive.js';
 
 const Container = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
   position: relative;
+  ${tablet({padding:"1rem"})}
+  ${mobile({padding:"1rem"})}
 `;
 
 const Image = styled.img`
@@ -14,7 +17,8 @@ const Image = styled.img`
   object-fit: cover;
   filter: brightness(50%);
   border-radius: 3px;
-  /* background-color: black; */
+
+   /* background-color: black; */
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
 `;
 const Info = styled.div`

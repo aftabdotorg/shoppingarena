@@ -31,8 +31,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  
-  &:hover ${Info}{
+
+  &:hover ${Info} {
     opacity: 1;
   }
 `;
@@ -69,23 +69,53 @@ const Icon = styled.div`
   }
 `;
 
+const Desc = styled.div`
+  width: 300px;
+  margin: auto;
+  text-align: left;
+`;
+
+const MainC = styled.div`
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding-bottom: 1rem;
+`;
+
+const P = styled.p`
+  text-overflow: ellipsis;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
 const SingleProduct = ({ item }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={item.image} />
-      <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <VisibilityOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
-      </Info>
-    </Container>
+    <MainC>
+      <Container>
+        <Circle />
+        <Image src={item.image} />
+
+        <Info>
+          <Icon>
+            <ShoppingCartOutlined />
+          </Icon>
+          <Icon>
+            <VisibilityOutlined />
+          </Icon>
+          <Icon>
+            <FavoriteBorderOutlined />
+          </Icon>
+        </Info>
+      </Container>
+      <Desc>
+        <P>
+          <b> Product: </b> {item.title}
+        </P>
+        <P>
+          <b> Price:</b> $ {item.price}
+        </P>
+      </Desc>
+    </MainC>
   );
 };
 

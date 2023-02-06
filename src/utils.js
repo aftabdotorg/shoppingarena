@@ -40,7 +40,7 @@ export const CatThumbs = [
     title: "Men's Clothing",
   },
   {
-    id: 3,
+    id: 4,
     img: 'https://images.pexels.com/photos/8217860/pexels-photo-8217860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: "Men's Clothing",
   },
